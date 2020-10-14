@@ -1,0 +1,11 @@
+{% extends 'classify/layout.html' %}
+{% block body %}
+<div id="result-box">
+    <img id="img_display" src="media/{{MEDIA_URL}}{{ img_obj.image }}" />
+    <p>Type of plant: <strong>{{ plant_type }}</strong>, Growth stage:
+        <strong>{{ growth_stage }}</strong>, Probability: <strong>{{ probability }} %.</strong> <br/>
+        <a href="{% url 'classify:index' %}">Return to upload page.</a>
+    </p>
+</div>
+
+{% endblock %}
